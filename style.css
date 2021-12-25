@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+/* font-family: 'Big Shoulders Display', cursive; */
+/* font-family: 'Lexend Deca', sans-serif; */
+:root{
+    --orange: hsl(31, 77%, 52%);
+    --cyan: hsl(184, 100%, 22%);
+    --cyan1: hsl(179, 100%, 13%);
+    --white: hsla(0, 0%, 100%, 0.75);
+    --gray: hsl(0, 0%, 95%);
+
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+html{
+    font-size: 15px;
+}
+body{
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--gray);
+    overflow-x: hidden;
+}
+main{
+    width: 60vw;
+    height: 60vh;
+    display: grid;
+    grid-template-rows: 25rem;
+}
+.card{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+img{
+    margin: 10px;
+    width: 3rem;
+    height: 2rem;
+}
+.card-head{
+    margin: 5px 10px;
+    font-family: 'Big Shoulders Display', cursive;
+    font-size: 2.3rem;
+    color: var(--gray);
+    text-transform: uppercase;
+}
+.content{
+    margin: 10px 10px 20px 10px;
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 0.8rem;
+    color: var(--white);
+    line-height: 1.2rem;
+}
+.btn{
+    margin: auto 10px;
+    font-size: 0.8rem;
+    padding: 8px 16px;
+    border: 2px solid var(--white);
+    border-radius: 20px;
+    font-family: 'Lexend Deca', sans-serif;
+    transition: background-color 0.4s ease-in-out , color 0.3s ease-in-out;
+    cursor: pointer;
+}
+#card1{
+    background-color: var(--orange);
+    border-radius: 10px 10px 0px 0px;
+}
+#card2{
+    background-color: var(--cyan);
+}
+#card3{
+    background-color: var(--cyan1);
+    border-radius: 0px 0px 10px 10px;
+}
+
+#btn1{
+    color: var(--orange);
+}
+
+#btn1:hover{
+    color: var(--white);
+    border: 2px solid var(--white);
+    background-color: var(--orange);
+}
+
+#btn2{
+    color: var(--cyan);
+}
+
+#btn2:hover{
+    border: 2px solid var(--white);
+    color: var(--white);
+    background-color: var(--cyan);
+}
+
+#btn3{
+    color: var(--cyan1);
+}
+
+#btn3:hover{
+    border: 2px solid var(--white);
+    color: var(--white);
+    background-color: var(--cyan1);
+}
+@media screen and (min-width:810px) {
+    body{
+        margin:10px;
+ 
+    }
+    main{
+        grid-template-columns: repeat(auto-fit,minmax(10rem,1fr));
+        grid-auto-rows: 25rem;
+    }
+    #card1{
+        border-radius: 10px 0px 0px 10px;
+    }
+    #card3{
+        border-radius: 0px 10px 10px 0px;
+    }
+}
